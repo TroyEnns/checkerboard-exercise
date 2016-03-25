@@ -1,5 +1,7 @@
 // Your JS goes here
 currentRow=1;
+var gradientOne=["#984BD8","#8642C0","#7539A8","#643090","#532779","#421E61","#311549"];
+var gradientTwo=["#3498DB","#2B7EB6","#226592","#1A4C6D","#113249","#081924","#000000"];
 function genDivs(){ 
       var e = document.body;  
       for(var i = 0; i < 7; i++){ 
@@ -19,20 +21,20 @@ function genDivs(){
             cell.style.paddingBottom='11.1%';
             if(currentRow%2===0){
                 if(x%2===0){
-                    cell.style.backgroundColor="black";
-                    cell.style.border="black";
+                    cell.style.backgroundColor=gradientOne[currentRow-1];
+                    cell.style.border=gradientOne[currentRow-1];
                 }else{
-                    cell.style.backgroundColor="red";
-                    cell.style.border="red";
+                    cell.style.backgroundColor=gradientTwo[currentRow-1];
+                    cell.style.border=gradientTwo[currentRow-1];
                 }
             }else if(currentRow%2!==0){
                 if(x%2===0){
-                    cell.style.backgroundColor="red";
-                    cell.style.border="red";
+                    cell.style.backgroundColor=gradientTwo[currentRow-1];
+                    cell.style.border=gradientTwo[currentRow-1];
 
                 }else{
-                    cell.style.backgroundColor="black";
-                    cell.style.border="black"
+                    cell.style.backgroundColor=gradientOne[currentRow-1];
+                    cell.style.border=gradientOne[currentRow-1];
                 }
             }
             row.appendChild(cell);
@@ -42,4 +44,6 @@ function genDivs(){
         e.appendChild(row);
         }
     }
+
+
 genDivs();
