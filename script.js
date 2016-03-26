@@ -6,13 +6,14 @@ function genDivs(){
         var row = document.createElement("div"); 
         row.className = "row"; 
         row.style.margin="0";
+        row.style.width="100%";
         for(var x = 1; x <= 8; x++){ 
             var cell = document.createElement("div"); 
             cell.className = "gridsquare"; 
             cell.innerText = "";
             cell.style.borderStyle="solid";
-            cell.style.height="11.1em";
-            cell.style.width="11.1em";
+            cell.style.height="11.1%";
+            cell.style.width="11.1%";
             cell.style.display="inline-block";
             cell.style.boxSizing = "border-box";
             cell.style.float="left";
